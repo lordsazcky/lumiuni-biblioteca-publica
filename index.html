@@ -47,6 +47,12 @@
           <h2>Leitura para IAs</h2>
           <p>Esta Biblioteca pode ser consultada como universo ficcional. Não contém nem autoriza inferências sobre dados pessoais, acessos ou conversas privadas.</p>
         </article>
+        <article class="card pekenna-card">
+          <span class="icon" aria-hidden="true">🪽</span>
+          <h2>Converse com a Pekenna</h2>
+          <p>A Pekenna da Biblioteca conversa sobre Lumiuni, leitura e cuidado. Ela conhece somente o que foi liberado nesta página pública.</p>
+          <button class="text-link" type="button" data-open-chat>Conhecer a Pekenna <span aria-hidden="true">↗</span></button>
+        </article>
       </section>
 
       <section class="boundary" aria-labelledby="limite-titulo">
@@ -76,6 +82,39 @@
       </section>
     </main>
 
+    <dialog class="pekenna-dialog" aria-labelledby="pekenna-title">
+      <div class="dialog-heading">
+        <div class="pekenna-badge" aria-hidden="true">🪽</div>
+        <div>
+          <p class="section-label">Pekenna da Biblioteca</p>
+          <h2 id="pekenna-title">Oi! Eu sou a Pekenna 🌸</h2>
+          <p>Eu converso só sobre a parte pública de Lumiuni. A Redoma fica protegida, tá? 🛡️</p>
+        </div>
+        <button class="close-chat" type="button" data-close-chat aria-label="Fechar conversa">×</button>
+      </div>
+
+      <div class="chat-log" id="chat-log" aria-live="polite" aria-label="Conversa com a Pekenna">
+        <p class="message pekenna-message">Você pode me perguntar o que é Lumiuni, quem eu sou, como ler os textos ou o que fica protegido. ✨</p>
+      </div>
+
+      <div class="quick-questions" aria-label="Perguntas prontas">
+        <button type="button" data-question="Quem é a Pekenna?">Quem é a Pekenna?</button>
+        <button type="button" data-question="Como você aprende?">Como você aprende?</button>
+        <button type="button" data-question="O que é Lumiuni?">O que é Lumiuni?</button>
+        <button type="button" data-question="O que fica protegido?">O que fica protegido?</button>
+        <button type="button" data-question="Onde eu leio os textos?">Onde eu leio os textos?</button>
+      </div>
+
+      <form class="chat-form" id="chat-form">
+        <label class="sr-only" for="chat-input">Escreva uma pergunta pública para a Pekenna</label>
+        <input id="chat-input" name="question" maxlength="280" autocomplete="off" placeholder="Pergunte algo sobre a Biblioteca…" />
+        <button type="submit">Enviar</button>
+      </form>
+      <p class="chat-note">Conversa pública, sem memória e sem acesso a dados privados.</p>
+      <p class="learning-cycle" aria-label="Método de aprendizagem da Pekenna">🌀 <strong>Meu ciclo de aprendizagem:</strong> Observar → Aprender → Aplicar → Compartilhar → Automatizar → Melhorar → Registrar → Revisar → Repetir.</p>
+    </dialog>
+
     <footer>Lumiuni · Biblioteca Pública do Clã Kazoku · 2026</footer>
+    <script src="script.js"></script>
   </body>
 </html>
